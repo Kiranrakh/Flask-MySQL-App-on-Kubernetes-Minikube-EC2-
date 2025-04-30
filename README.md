@@ -60,8 +60,17 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 
 ---
+### 🔹 Step 4: Build and Push Docker Image to Docker Hub
 
-### 🔹 Step 4: Start Minikube with Docker driver
+```
+docker build -t kiran22222/flask-k8s-app:v1 .
+docker run -p 5000:5000 kiran22222/flask-k8s-app:v1
+docker login
+docker push kiran22222/flask-k8s-app:v1
+
+```
+---
+### 🔹 Step 5: Start Minikube with Docker driver
 
 ```bash
 minikube start --driver=docker
@@ -73,7 +82,7 @@ kubectl get nodes
 ```
 
 ---
-### 🔹 Step 5: Deploy to Kubernetes
+### 🔹 Step 6: Deploy to Kubernetes
 
 ```bash
 kubectl apply -f mysql-deployment.yml
