@@ -60,7 +60,14 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 
 ---
-### 🔹 Step 4: Build and Push Docker Image to Docker Hub
+### 🔹 Step 7: Deploy to Kubernetes
+```
+Create project files
+OR
+clone gitHub Repo: "https://github.com/Kiranrakh/Flask-MySQL-App-on-Kubernetes-Minikube-EC2-"
+
+```
+### 🔹 Step 5: Build and Push Docker Image to Docker Hub
 
 ```
 docker build -t kiran22222/flask-k8s-app:v1 .
@@ -70,7 +77,7 @@ docker push kiran22222/flask-k8s-app:v1
 
 ```
 ---
-### 🔹 Step 5: Start Minikube with Docker driver
+### 🔹 Step 6: Start Minikube with Docker driver
 
 ```bash
 minikube start --driver=docker
@@ -82,7 +89,7 @@ kubectl get nodes
 ```
 
 ---
-### 🔹 Step 6: Deploy to Kubernetes
+### 🔹 Step 7: Deploy to Kubernetes
 
 ```bash
 kubectl apply -f mysql-deployment.yml
@@ -100,7 +107,7 @@ You should see "Welcome to the Flask + MySQL TODO API 🚀".
 
 GET http://<EC2-IP>:30001/
 
-### GET Request to /tasks 
+### 🔹GET Request to /tasks 
 GET http://<EC2-IP>:30001/tasks
 [
   {
@@ -113,7 +120,7 @@ GET http://<EC2-IP>:30001/tasks
   }
 ]
 
-### POST Request to /tasks
+### 🔹POST Request to /tasks
 POST http://<EC2-IP>:30001/tasks
 
 
