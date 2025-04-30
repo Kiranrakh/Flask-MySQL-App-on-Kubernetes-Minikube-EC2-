@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: kiranrakh/flask-todo   # Replace with your Docker Hub image
+        image: kiran22222/flask-todo   
         ports:
         - containerPort: 5000
 ---
